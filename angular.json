@@ -52,7 +52,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/toastr.css"
             ],
             "scripts": []
           },
@@ -122,5 +123,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c6de3fd4-ea6d-4011-ae14-e794ab08eee1"
   }
 }

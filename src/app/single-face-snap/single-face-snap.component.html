@@ -1,0 +1,24 @@
+<div class = "face-snap-card" [ngClass]="{snapped:buttonClicked==false}" >
+    <p *ngIf="faceSnap.snaps>2">
+
+    <h2><editable-text  [text]="faceSnap.title" ></editable-text></h2>
+
+    <div class ="favourite"  [ngClass]="{favourite:faceSnap.isFavourite==true}"><button (click) = "onFav()" > Favori </button></div>
+    <p>Mis en ligne {{ faceSnap.createdDate | date: 'à HH:mm, le d MMMM yyyy' }}</p>
+    
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+    <p>{{ faceSnap.description }}</p>
+    <p *ngIf="faceSnap.location">Location :  {{ faceSnap.location }}</p>
+    <p *ngIf="faceSnap.location === 'Afrique'"> Hakuna matata</p>
+    <p>
+        <button (click)="onSnap()">{{buttonText}} </button>
+        <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">🤌 {{ faceSnap.snaps }}</span>    
+    </p>
+    </div>
+    <div class = "face-snap-card" ><b (click)="onBack()">Retour </b></div>
+    
+
+   
+
+    
+    

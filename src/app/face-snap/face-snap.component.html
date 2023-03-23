@@ -1,0 +1,12 @@
+<div class = "face-snap-card" [ngClass]="{snapped:buttonClicked==false}">
+<p *ngIf="faceSnap.snaps>2">
+<h2>{{ faceSnap.title | titlecase}}</h2>
+
+
+<p>{{ faceSnap.description }}</p>
+<p>
+    <button (click)="onView()">Afficher</button>
+</p>
+
+</div>
+
